@@ -1,0 +1,224 @@
+{
+  "license" : "@@@LICENSE  Copyright (c) 2017 LG Electronics, Inc.  Unless otherwise specified or set forth in the NOTICE file, all content,  including all source code files and documentation files in this repository are :  Confidential computer software. Valid license from LG required for  possession, use or copying.  LICENSE@@@  Information Codec configuration info",
+  "version" : "@CODEC_CONFIG_VERSION@",
+  "videoCodecs" : [
+    {
+      "name" : "H.264",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "DivX",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "XviD",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "H.263",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "MPEG1",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "MPEG2",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "MPEG4",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "MP4S",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "MPS2",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "MP43",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "MJPEG",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "RV30",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "RV40",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "WMV",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "VP8",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    },
+
+    {
+      "name" : "AVS",
+      "maxWidth" : 1920,
+      "maxHeight" : 1080,
+      "maxFrameRate" : 30,
+      "maxBitRate" : 40
+    }
+  ],
+  "audioCodecs" : [
+    {
+      "name" : "MPEG",
+      "channels" : 2
+    },
+
+    {
+      "name" : "AAC",
+      "channels" : 6
+    },
+
+    {
+      "name" : "WMA",
+      "channels" : 6
+    },
+
+    {
+      "name" : "WMAP",
+      "channels" : 8
+    },
+
+    {
+      "name" : "WMAL",
+      "channels" : 8
+    },
+
+    {
+      "name" : "PCM",
+      "channels" : 2
+    },
+
+    {
+      "name" : "LPCM",
+      "channels" : 2
+    },
+
+    {
+      "name" : "AC3",
+      "channels" : 6
+    },
+
+    {
+      "name" : "EAC3",
+      "channels" : 6
+    },
+
+    {
+      "name" : "DTS",
+      "channels" : 6
+    },
+
+    {
+      "name" : "DTSH",
+      "channels" : 6
+    },
+
+    {
+      "name" : "DTSE",
+      "channels" : 6
+    },
+
+    {
+      "name" : "DRA",
+      "channels" : 6
+    },
+
+    {
+      "name" : "Vorbis",
+      "channels" : 6
+    },
+
+    {
+      "name" : "RA6",
+      "channels" : 2
+    },
+
+    {
+      "name" : "RA8",
+      "channels" : 6
+    },
+
+    {
+      "name" : "AMR",
+      "channels" : 1
+    },
+
+    {
+      "name" : "FLAC",
+      "channels" : 6
+    }
+  ]
+}

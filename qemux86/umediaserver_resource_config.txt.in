@@ -1,0 +1,243 @@
+# @@@LICENSE
+#
+# Copyright (c) 2014 LG Electronics, Inc.
+#
+# Unless otherwise specified or set forth in the NOTICE file, all content,
+# including all source code files and documentation files in this repository are:
+# Confidential computer software. Valid license from LG required for
+# possession, use or copying.
+#
+# LICENSE@@@
+#
+#
+#
+# Example Resource Manager description and Policy Manager Configuration file
+
+version = "@RESOURCE_CONFIG_VERSION@";
+
+resources = (
+	{
+		id = "ADTU";
+		name = "Analog Digital Tuner";
+		qty = 2;
+	},
+
+	{
+		id = "DTU";
+		name = "Digital Tuner";
+		qty = 2;
+	},
+
+	{
+		id = "ATU";
+		name = "Analog Tuner";
+		qty = 2;
+	},
+
+	{
+		id = "CI";
+		name = "Common Interface";
+		qty = 1;
+	},
+
+	{
+		id = "SDEC";
+		name = "Demux";
+		qty = 4;
+	},
+
+	{
+		id = "VDEC";
+		name = "Digital Video Decoder";
+		qty = 2;
+	},
+
+	{
+		id = "HEVC_VDEC";
+		name = "HEVC Digital Video Decoder";
+		qty = 1;
+	},
+
+	{
+		id = "ATP";
+		name = "Audio Transport Processor";
+		qty = 2;
+	},
+
+	{
+		id = "ADEC";
+		name = "Digital Audio Decoder";
+		qty = 2;
+	},
+
+	{
+		id = "SECONDARY_SCALER";
+		name = "Secondary Scaler";
+		qty = 1;
+	},
+
+	{
+		id = "VENC";
+		name = "Video Encoder";
+		qty = 1;
+	},
+
+	{
+		id = "AENC";
+		name = "Audio Encoder";
+		qty = 1;
+	},
+
+	{
+		id = "VHDMIRX";
+		name = "Video HDMI Receiver";
+		qty = 1;
+	},
+
+	{
+		id = "AHDMIRX";
+		name = "Audio HDMI Receiver";
+		qty = 1;
+	},
+
+	{
+		id = "AVD";
+		name = "Analog Video Decoder";
+		qty = 1;
+	},
+
+	{
+		id = "AAD";
+		name = "Analog Audio Decoder";
+		qty = 1;
+	},
+
+	{
+		id = "VADC";
+		name = "Video Analog to Digital Converter";
+		qty = 1;
+	},
+
+	{
+		id = "AADC";
+		name = "Audio Analog to Digital Converter";
+		qty = 1;
+	},
+
+	{
+		id = "AVE";
+		name = "Analog Video Encoder";
+		qty = 1;
+	},
+
+	{
+		id = "SNDSCART";
+		name = "Audio SCART Out";
+		qty = 1;
+	},
+
+	{
+		id = "PCMMC";
+		name = "PCM Mix Channel";
+		qty = 5;
+	},
+
+	{
+		id = "IMG_DEC";
+		name = "Image Decoder";
+		qty = 1;
+	},
+
+	{
+		id = "SVP_TZ";
+		name = "Secure Video Path Trust Zone";
+		qty = 1;
+	},
+
+	{
+		id = "BRIDGE";
+		name = "Chip Bridge";
+		qty = 2;
+	},
+
+	{
+		id = "CPB";
+		name = "Secure Video Path";
+		qty = 1;
+	},
+
+	{
+		id = "AAC6";
+		name = "Virtual resource for AAC 6 channel";
+		qty = 1;
+	}
+);
+
+# Policy Note: unload policty must be supported by all pipelines if selected by policy manager
+#   even if pipeline can release resources individually
+
+pipelines = (
+	{
+		# REFERENCE pipeline type. ONLY used for internal uMS dev
+		type = "ref";
+		name = "REFRENCE video pipeline.";
+		bin  = "@CONF_PIPELINE_BINARY_PATH@/umediapipeline";
+		schema_file = "@CONF_SCHEMA_PATH@/fileschema.js";
+		priority = 4;
+
+		# maximum number of restarts in a 5 second interval
+		# set to 0 to disable restarts
+		# if left out it defaults to 0
+		max_restarts = 2;
+	},
+
+	{
+		type = "direct_av";
+		name = "Direct Audio/Video Playback";
+		priority = 4;
+	},
+
+	{
+		type = "vcs";
+		name = "Voice/Video Call";
+		priority = 4;
+	},
+
+	{
+		type = "media";
+		name = "Video playback pipeline.";
+		bin  = "@CONF_PIPELINE_BINARY_PATH@/starfish-media-pipeline";
+		priority = 4;
+	},
+
+	{
+		# TV.
+		type = "tv";
+		name = "TV Service";
+		priority = 4;
+	},
+
+	{
+		type = "camera";
+		name = "Camera preview/record pipeline";
+		bin  = "@CONF_PIPELINE_BINARY_PATH@/camera-pipeline";
+		priority = 4;
+	},
+
+	{
+		# photoservice.
+		type = "photo";
+		name = "photoservice";
+		priority = 4;
+	},
+
+	{
+		type = "sim";
+		name = "Simulating playback pipeline.";
+		bin  = "@CONF_PIPELINE_BINARY_PATH@/simulated_pipeline";
+		schema_file = "@CONF_SCHEMA_PATH@/fileschema.js";
+		priority = 4;
+	}
+);
+
+dynamic_pipeline_dir = "@WEBOS_INSTALL_ROOT@/var/lib/ums/conf";

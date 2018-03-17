@@ -1,0 +1,51 @@
+# @@@LICENSE
+#
+# Copyright (c) 2014 LG Electronics, Inc.
+#
+# Unless otherwise specified or set forth in the NOTICE file, all content,
+# including all source code files and documentation files in this repository are:
+# Confidential computer software. Valid license from LG required for
+# possession, use or copying.
+#
+# LICENSE@@@
+#
+#
+#
+# Example Resource Manager description and Policy Manager Configuration file
+
+version = "@RESOURCE_CONFIG_VERSION@";
+
+resources = (
+	{
+		id = "VDEC";
+		name = "Digital Video Decoder";
+		qty = 4;
+	},
+
+	{
+		id = "ADEC";
+		name = "Digital Audio Decoder";
+		qty = 4;
+	}
+);
+
+# Policy Note: unload policty must be supported by all pipelines if selected by policy manager
+#   even if pipeline can release resources individually
+
+pipelines = (
+	{
+		type = "sim";
+		name = "Simulating playback pipeline.";
+		bin  = "@CONF_PIPELINE_BINARY_PATH@/simulated_pipeline";
+		schema_file = "@CONF_SCHEMA_PATH@/fileschema.js";
+		priority = 4;
+	},
+	{
+                type = "media";
+                name = "Media pipeline.";
+                bin  = "@CONF_PIPELINE_BINARY_PATH@/reference-media-pipeline";
+                priority = 4;
+        }
+);
+
+dynamic_pipeline_dir = "@WEBOS_INSTALL_ROOT@/var/lib/ums/conf";
