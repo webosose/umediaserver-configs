@@ -1,16 +1,18 @@
-# @@@LICENSE
+# Copyright (c) 2018 LG Electronics, Inc.
 #
-# Copyright (c) 2014-2018 LG Electronics, Inc.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-# Unless otherwise specified or set forth in the NOTICE file, all content,
-# including all source code files and documentation files in this repository are:
-# Confidential computer software. Valid license from LG required for
-# possession, use or copying.
+# http://www.apache.org/licenses/LICENSE-2.0
 #
-# LICENSE@@@
-
-# Default settings used for device. Target-specific overrides are done below.
-# If you change a value here, check to see if the overrides below are still necessary.
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
 
 cmake_minimum_required(VERSION 2.8.7)
 include(webOS/webOS)
