@@ -22,7 +22,7 @@ resources = (
   # Display Planes
   # in RPi3 they are numbered from 44 and there are eight such planes
 	{
-		id = "DISP";
+		id = "DISP0";
 		name = "VC Overlay Plane";
 		qty = 4;
 	},
@@ -55,6 +55,12 @@ pipelines = (
 		type = "media";
 		name = "Media pipeline.";
 		bin  = "@CONF_PIPELINE_BINARY_PATH@/g-media-pipeline";
+		priority = 4;
+	},
+	{
+		type = "ref";
+		name = "Reference Media pipeline.";
+		bin  = "@CONF_PIPELINE_BINARY_PATH@/umediapipeline";
 		priority = 4;
 	}
 );

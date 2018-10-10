@@ -20,53 +20,11 @@ version = "@RESOURCE_CONFIG_VERSION@";
 
 resources = (
   # Display Planes
-	{
-		id = "DISP_0";
-		name = "44";
-		qty = 1;
-	},
-
-	{
-		id = "DISP_1";
-		name = "45";
-		qty = 1;
-	},
-
-	{
-		id = "DISP_2";
-		name = "46";
-		qty = 1;
-	},
-
-	{
-		id = "DISP_3";
-		name = "47";
-		qty = 1;
-	},
-
-	{
-		id = "DISP_4";
-		name = "48";
-		qty = 1;
-	},
-
-	{
-		id = "DISP_5";
-		name = "49";
-		qty = 1;
-	},
-
-	{
-		id = "DISP_6";
-		name = "50";
-		qty = 1;
-	},
-
-	{
-		id = "DISP_7";
-		name = "51";
-		qty = 1;
-	},
+        {
+                id = "DISP0";
+                name = "Display Planes";
+                qty = 4;
+        },
 
 	{
 		id = "ADTU";
