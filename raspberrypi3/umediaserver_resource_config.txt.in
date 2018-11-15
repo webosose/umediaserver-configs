@@ -62,6 +62,12 @@ pipelines = (
 		name = "Reference Media pipeline.";
 		bin  = "@CONF_PIPELINE_BINARY_PATH@/g-media-pipeline";
 		priority = 4;
+	},
+	{
+		type = "camera";
+		name = "Camera pipeline.";
+		bin  = "@CONF_PIPELINE_BINARY_PATH@/g-camera-pipeline";
+		priority = 4;
 	}
 );
 
