@@ -60,7 +60,7 @@ pipelines = (
 	{
 		type = "ref";
 		name = "Reference Media pipeline.";
-		bin  = "@CONF_PIPELINE_BINARY_PATH@/umediapipeline";
+		bin  = "@CONF_PIPELINE_BINARY_PATH@/g-media-pipeline";
 		priority = 4;
 	}
 );
