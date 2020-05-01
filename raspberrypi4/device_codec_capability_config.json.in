@@ -123,14 +123,6 @@
     },
 
     {
-      "name" : "VP8",
-      "maxWidth" : 1920,
-      "maxHeight" : 1080,
-      "maxFrameRate" : 30,
-      "maxBitRate" : 40
-    },
-
-    {
       "name" : "AVS",
       "maxWidth" : 1920,
       "maxHeight" : 1080,
