@@ -32,6 +32,12 @@ resources = (
 	},
 
 	{
+		id = "VENC";
+		name = "Digital Video Encoder";
+		qty = 4;
+	},
+
+	{
 		id = "ADEC";
 		name = "Digital Audio Decoder";
 		qty = 4;
