@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2019 LG Electronics, Inc.
+# Copyright (c) 2018-2021 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -229,8 +229,8 @@ pipelines = (
 
 	{
 		type = "camera";
-		name = "Camera preview/record pipeline";
-		bin  = "@CONF_PIPELINE_BINARY_PATH@/camera-pipeline";
+		name = "Camera pipeline";
+		bin  = "@CONF_PIPELINE_BINARY_PATH@/g-camera-pipeline";
 		priority = 4;
 	},
 

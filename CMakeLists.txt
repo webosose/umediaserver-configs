@@ -1,4 +1,4 @@
-# Copyright (c) 2018-2019 LG Electronics, Inc.
+# Copyright (c) 2018-2021 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,8 +26,9 @@ SET(CODEC_CONFIG_VERSION "1.0")
 set(CONF_PIPELINE_BINARY_PATH "${WEBOS_INSTALL_SBINDIR}")
 set(CONF_SCHEMA_PATH "${WEBOS_INSTALL_SYSCONFDIR}/umediaserver")
 
-if (${WEBOS_TARGET_MACHINE} MATCHES "qemux86")
+if ("${WEBOS_TARGET_MACHINE}" STREQUAL "qemux86")
 webos_build_configured_file(qemux86/umediaserver_resource_config.txt SYSCONFDIR umediaserver)
+webos_build_configured_file(qemux86/device_codec_capability_config.json SYSCONFDIR umediaserver)
 elseif ("${WEBOS_TARGET_MACHINE}" STREQUAL "raspberrypi3")
 webos_build_configured_file(raspberrypi3/umediaserver_resource_config.txt SYSCONFDIR umediaserver)
 webos_build_configured_file(raspberrypi3/device_codec_capability_config.json SYSCONFDIR umediaserver)
