@@ -32,7 +32,7 @@ webos_build_configured_file(qemux86/device_codec_capability_config.json SYSCONFD
 elseif ("${WEBOS_TARGET_MACHINE}" STREQUAL "raspberrypi3")
 webos_build_configured_file(raspberrypi3/umediaserver_resource_config.txt SYSCONFDIR umediaserver)
 webos_build_configured_file(raspberrypi3/device_codec_capability_config.json SYSCONFDIR umediaserver)
-elseif ("${WEBOS_TARGET_MACHINE}" STREQUAL "raspberrypi4")
+elseif ("${WEBOS_TARGET_MACHINE}" STREQUAL "raspberrypi4" OR ${WEBOS_TARGET_MACHINE} STREQUAL "raspberrypi4-64")
 webos_build_configured_file(raspberrypi4/umediaserver_resource_config.txt SYSCONFDIR umediaserver)
 webos_build_configured_file(raspberrypi4/device_codec_capability_config.json SYSCONFDIR umediaserver)
 else() #desktop implementation
