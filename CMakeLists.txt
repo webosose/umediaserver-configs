@@ -26,7 +26,7 @@ SET(CODEC_CONFIG_VERSION "1.0")
 set(CONF_PIPELINE_BINARY_PATH "${WEBOS_INSTALL_SBINDIR}")
 set(CONF_SCHEMA_PATH "${WEBOS_INSTALL_SYSCONFDIR}/umediaserver")
 
-if ("${WEBOS_TARGET_MACHINE}" STREQUAL "qemux86")
+if ("${WEBOS_TARGET_MACHINE}" STREQUAL "qemux86" OR ${WEBOS_TARGET_MACHINE} STREQUAL "qemux86-64")
 webos_build_configured_file(qemux86/umediaserver_resource_config.txt SYSCONFDIR umediaserver)
 webos_build_configured_file(qemux86/device_codec_capability_config.json SYSCONFDIR umediaserver)
 elseif ("${WEBOS_TARGET_MACHINE}" STREQUAL "raspberrypi3")
