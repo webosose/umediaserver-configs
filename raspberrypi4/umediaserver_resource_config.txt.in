@@ -28,7 +28,7 @@ resources = (
 	{
 		id = "VDEC";
 		name = "Digital Video Decoder";
-		qty = 4;
+		qty = 32;
 	},
 
 	{
